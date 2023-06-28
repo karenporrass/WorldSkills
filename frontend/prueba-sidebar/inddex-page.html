@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container" >
+        
+        <!-- <img src="./logo.png" alt=""> -->
+        <div id="sidebar">
+
+        <div class="btn">
+                <span>&#9776</span>
+        </div>
+        <div class="title" >
+            <h2 >World skills</h2>
+        </div>
+         <div class="menu">
+            <h2 >Menu</h2>
+        </div>
+        <ul>
+            <li>Crear aprendiz</li>
+            <li>Crear equipo</li>
+            <li>Prestar equipo</li>
+            <li>Crear libro</li>
+            <li>Prestar libro</li>
+        </ul>
+    </div>
+        
+    </div>
+    <div class="footer">
+        <h4>Derechos reservados</h4>
+    </div>
+</body>
+<script>
+
+
+const btnToggle = document.querySelector('.btn');
+
+btnToggle.addEventListener('click', function () {
+  document.getElementById('sidebar').classList.toggle('active');
+});
+</script>
+
+
+
+
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+
+    .footer{
+        background-color:rgb(124, 165, 240);
+        position: fixed;
+        bottom: 0px;
+        width: 100%;
+        height: 5%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .container{
+        background-color:rgb(124, 165, 240);
+        position: fixed;
+        width: 100%;
+        height: 8%;
+        /* z-index: 5; */
+    }
+
+    #sidebar {
+    position: fixed;
+    width: 200px;
+    height: 100%;
+    background-color: rgba(2, 10, 92, 0.808);
+    left: -200px;
+    /* z-index: 10; */
+    transition: all 300ms linear;
+}
+#sidebar.active{
+    left:0px
+}
+#sidebar ul li{
+    color: rgba(255, 255, 255, 0.9);
+    list-style: none;
+    padding: 10px 5px;
+    border-bottom: 1px solid rgba(248, 248, 248, 0.3);
+    text-align: center;
+}
+
+li:hover{
+    background-color: rgba(68, 145, 212, 0.541);
+    /* border-bottom: 1px solid rgb(248, 248, 248); */
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    color: white;
+    height: 8%;
+    border-bottom: 1px solid rgba(248, 248, 248, 0.3);
+   
+}
+.menu h2{
+    margin-left: 1rem;
+}
+
+.btn{
+    position: absolute;
+    left: 210px;
+    top: 0px;
+    background-color: rgba(240, 248, 255, 0);
+    border-color: rgba(240, 248, 255, 0);
+    cursor: pointer;
+}
+.btn span{ 
+    display: block;
+    width: 40px;
+    text-align: center;
+    font-size: 30px;
+ } 
+
+.title{
+ 
+    display: flex;
+    align-items: center;
+    position: absolute;
+    left: 270px;
+    top: 0px;   
+    height: 8%;
+    width: 100%;
+}
+
+
+
+
+
+</style>
+</html>
